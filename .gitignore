@@ -1,0 +1,14 @@
+# Binary files
+bin/
+
+# Object files
+obj/
+
+# Result files
+*.bin
+
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
