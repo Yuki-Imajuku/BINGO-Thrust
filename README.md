@@ -28,7 +28,7 @@ Directory already exists: results
  35 40 31 37 42
  49 53 57 55 52
  62 70 71 72 69
-Elapsed time: 27279 [msec]
+Elapsed time: 27553 [msec]
 
 # Analyze
 make analyze
