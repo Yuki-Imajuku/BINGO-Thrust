@@ -28,7 +28,7 @@ Directory already exists: results
  47 52 26 39 74 65 27 43 66 59 29  3 36 69 32
   1 19 21 56 42 50 30  8 38 31 57 33  6 16 67
  54 40 22 63 34 12  0 53 17 62 70  2 10 35 44
-Elapsed time: 103941 [msec]
+Elapsed time: 102417 [msec]
 
 # Analyze
 make analyze

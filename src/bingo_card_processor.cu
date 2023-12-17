@@ -62,10 +62,7 @@ struct GenerateAndMark {
                 bool bingo = true;
                 for(int i = 0; i < 5; i++) {
                     int idx = row_start + i;
-                    if(card[idx] >= 0) {
-                        bingo = false;
-                        break;  // not marked
-                    }
+                    bingo &= card[idx] < 0;  // marked
                 }
                 if(bingo) {
                     result.bingo_at = cnt + 1;  // cnt starts from 0
@@ -78,10 +75,7 @@ struct GenerateAndMark {
                 bool bingo = true;
                 for(int row_start = 0; row_start < 25; row_start += 5) {
                     int idx = row_start + i;
-                    if(card[idx] >= 0) {
-                        bingo = false;
-                        break;  // not marked
-                    }
+                    bingo &= card[idx] < 0;  // marked
                 }
                 if(bingo) {
                     result.bingo_at = cnt + 1;  // cnt starts from 0
@@ -92,20 +86,15 @@ struct GenerateAndMark {
             // check diagonal
             bool bingo = true;
             for(int i = 0; i < 30; i += 6) {
-                if(card[i] >= 0) {
-                    bingo = false;
-                    break;  // not marked
-                }
+                bingo &= card[i] < 0;  // marked
             }
             if(bingo) {
                 result.bingo_at = cnt + 1;  // cnt starts from 0
                 return result;
             }
+            bingo = true;
             for(int i = 4; i < 24; i += 4) {
-                if(card[i] >= 0) {
-                    bingo = false;
-                    break;  // not marked
-                }
+                bingo &= card[i] < 0;  // marked
             }
             if(bingo) {
                 result.bingo_at = cnt + 1;  // cnt starts from 0
